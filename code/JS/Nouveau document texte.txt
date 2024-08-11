@@ -1,0 +1,14 @@
+function runSimulation() {
+    const employees = parseInt(document.getElementById('number-of-employees').value, 10);
+    const turnover = parseFloat(document.getElementById('turnover').value);
+    const balanceSheet = parseFloat(document.getElementById('balance-sheet').value);
+
+    let resultText = 'Your company does not meet the conditions to apply for CSRD.';
+
+    // Example conditions based on the CSRD criteria
+    if (employees > 250 || turnover > 40 || balanceSheet > 20) {
+        resultText = 'Your company meets the conditions to apply for CSRD.';
+    }
+
+    document.getElementById('result').innerText = resultText;
+}
